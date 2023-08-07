@@ -7,25 +7,31 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 const middlewares = require('./middlewares');
+const logs = require('./api/logs');
 
 const app = express();
 
 mongoose.connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,
-
-});
+    useUnifiedTopology: true,
+})
+    .then(result => console.log('db connected'))
+    .catch(err => console.log(err));
 
 app.use(morgan('common'));
 app.use(helmet());
 app.use(cors({
     origin: process.env.CORS_ORIGIN,
 }));
+app.use(express.json());
 
 app.get('/', (req, res) => {
     res.json({
         message: 'Hello world!'
     });
 });
+
+app.use('/api/logs', logs);
 
 //Not Found error and forwarding to error handler middleware
 app.use(middlewares.notFound);
