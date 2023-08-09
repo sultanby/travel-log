@@ -9,15 +9,11 @@ body {
   height: 100wh;
 }
 
-.marker {
-  transform: translate(-50%, -100%);
-}
-
 .error {
   color: #f05305;
 }
 
-.marker.red path {
+.red path {
   fill: #f05305;
 }
 
