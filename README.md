@@ -32,3 +32,4 @@ The Travel Log App is a full-stack web application that allows users to keep tra
 - View your travel entries.
 - Explore your travel history.
 
+![Example](/client/public/example.png)
