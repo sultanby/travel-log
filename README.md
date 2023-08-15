@@ -27,7 +27,8 @@ The Travel Log App is a full-stack web application that allows users to keep tra
 8. Start the frontend: `npm start` in the `client` directory.
 
 ## Usage
-- Add new travel entries by providing details and uploading photos.
+- Add new travel entries by double tap 
+- Provide travel details and uploade photo.
 - View your travel entries.
 - Explore your travel history.
 
